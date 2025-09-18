@@ -9,7 +9,7 @@ type Props = {
 };
 
 const CoverImage = ({ title, src, slug }: Props) => {
-  const image = (
+  /*const image = (
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
@@ -19,16 +19,10 @@ const CoverImage = ({ title, src, slug }: Props) => {
       width={1300}
       height={630}
     />
-  );
+  );*/
   return (
     <div className="sm:mx-0">
-      {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
+      <Link href={`/posts/${slug}`} aria-label={title}></Link>
     </div>
   );
 };
