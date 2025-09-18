@@ -11,7 +11,7 @@ export function Intro() {
           className="underline hover:text-blue-600 duration-200 transition-colors"
         >
           La frèrerie
-        </a>{" "}.
+        </a>
       </h4>
     </section>
   );

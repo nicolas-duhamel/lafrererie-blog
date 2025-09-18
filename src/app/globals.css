@@ -1,3 +1,51 @@
+/* ================================
+   Tailwind Base Imports
+   ================================ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --bg-dark: #1a001f;
+    /* very dark purple background */
+    --text-dark: #e0e0ff;
+    /* light lavender text */
+    --accent1-dark: #ff00ff;
+    /* neon pink headers */
+    --accent2-dark: #00ffff;
+    /* neon cyan for links/highlights */
+    --border-dark: #330033;
+    /* subtle purple borders */
+    --glow-dark: #ff00ff;
+    /* neon pink glow effect */
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--accent1-dark);
+}
+
+a {
+    color: var(--accent2-dark);
+    text-decoration: none;
+}
+
+code,
+pre {
+    background-color: #220022;
+    color: var(--accent1-dark);
+    border-radius: 6px;
+    padding: 0.2rem 0.4rem;
+}
+
+.glow {
+    text-shadow: 0 0 6px var(--glow-dark), 0 0 12px var(--glow-dark);
+}
