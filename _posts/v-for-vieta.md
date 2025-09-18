@@ -10,7 +10,7 @@ ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
 
-code : [https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/crypto/v-for-vieta/src](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/crypto/v-for-vieta/src)
+[Source du challenge](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/crypto/v-for-vieta/src)
 
 Cela aurait pu faire un bon challenge beginner/misc. Au vu du peu nombre de résolution comparait à la difficulté que je perçoit je me sens obliger d'expliquer comment approcher un tel challenge. Pour résumer, on nous envoi un entier k qui est un carré et on doit trouver a,b tel que ```(a**2 + a * b + b**2) / (2 * a * b + 1) = k```.
 
@@ -24,7 +24,8 @@ Encore une fois si on ne sais pas comment s'y prendre, on va faire le test pour 
 
 Il nous suffit maintenant de swapper les variables a,b et ce qui nous permet de faire une boucle simplement avec des valeurs de plus en plus grande pour a et b.
 
-```from pwn import *
+```python
+from pwn import *
 import json
 import libnum
 

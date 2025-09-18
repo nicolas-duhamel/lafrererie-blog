@@ -10,15 +10,16 @@ ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
 ---
 
-code : [https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/crypto/my-array-generator/src](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/crypto/my-array-generator/src)
+[Source du challenge](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/crypto/my-array-generator/src)
 
-En description du challenge, on nous apprendre que l'algorithme de chiffrement à notre disposition est une variante du MAG cipher qui a été soumis à l'ECRYPT. Après quelques recherches, on tombe sur cette publication [https://www.researchgate.net/profile/Mohan-Thite/publication/44986304_Information_security_and_Privacy_in_HRIS/links/0c960532112d57fb6a000000/Information-security-and-Privacy-in-HRIS.pdf](https://www.researchgate.net/profile/Mohan-Thite/publication/44986304_Information_security_and_Privacy_in_HRIS/links/0c960532112d57fb6a000000/Information-security-and-Privacy-in-HRIS.pdf) et l'article "Improved Cryptanalysis of MAG" by Leonie Simpson and Matt Henricksen à la page 64. Dans la section 4.2, les auteurs nous apprennent  que le chiffrement leak 1/4 de la clé pour l'algorithme de chiffrement.
+En description du challenge, on nous apprendre que l'algorithme de chiffrement à notre disposition est une variante du MAG cipher qui a été soumis à l'ECRYPT. Après quelques recherches, on tombe sur cette publication [Information-security-and-Privacy-in-HRIS.pdf](https://www.researchgate.net/profile/Mohan-Thite/publication/44986304_Information_security_and_Privacy_in_HRIS/links/0c960532112d57fb6a000000/Information-security-and-Privacy-in-HRIS.pdf) et l'article "Improved Cryptanalysis of MAG" by Leonie Simpson and Matt Henricksen à la page 64. Dans la section 4.2, les auteurs nous apprennent  que le chiffrement leak 1/4 de la clé pour l'algorithme de chiffrement.
 
 Le challenge est une variante du chiffrement MAG dans lequel l'auteur de MAG tente de corriger des défauts mais introduit par l'occassion un leak complet de la clé de chiffrement par l'introduction d'aléatoire dans le chiffrement. On sait que la clé est leak, ils nous suffit de faire un xor entre le plaintext et le ciphertext. Le seul problème est que les caractères ne sont pas dans le bon ordre.
 
 On va introduire dans la clé des caractères reconnaissable et faire un dictionnaire des positions auxquels ces caractères apparaissent. Pour retrouver notre clé inconnu, on va faire un dictionnaire inverse qui pour les positions en question va nous donner les caractères correspondants. 
 
-```if __name__ == "__main__":
+```python
+if __name__ == "__main__":
     KEY = b"DUCTF{abcdefghijklmnopqrstuvwxy}"
     random.seed(1234)
     cipher = MyArrayGenerator(KEY)

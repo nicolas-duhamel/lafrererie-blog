@@ -49,3 +49,16 @@ pre {
 .glow {
     text-shadow: 0 0 6px var(--glow-dark), 0 0 12px var(--glow-dark);
 }
+
+pre.shiki {
+    background-color: inherit !important;
+    /* use Shiki's inline background */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+pre.shiki code {
+    background: none !important;
+}

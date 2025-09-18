@@ -7,15 +7,16 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
-    "daisyui": "^5.1.13",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
     "next": "15.0.2",
-    "next-themes": "^0.4.6",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-rehype": "^11.1.2",
+    "shiki": "^3.12.2",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.8",
