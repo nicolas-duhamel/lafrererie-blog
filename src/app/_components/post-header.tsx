@@ -9,12 +9,14 @@ type Props = {
   coverImage: string;
   date: string;
   author: Author;
+  excerpt: string;
 };
 
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({ title, coverImage, date, author, excerpt }: Props) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
+      <p className="text-3xl text-pink-400 leading-relaxed mb-6 drop-shadow-[0_0_8px_#ff00ff]">{excerpt}</p>
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>
