@@ -1,6 +1,6 @@
 ---
 title: "V for Vieta"
-excerpt: "This is the challenge V for Vieta from downunder 2024"
+excerpt: "Crypto, downunder 2024"
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2024-07-08"
 author:

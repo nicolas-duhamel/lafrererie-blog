@@ -1,6 +1,6 @@
 ---
 title: "Sniffy"
-excerpt: "This is the challenge Sniffy from downunder 2024"
+excerpt: "Web, downunder 2024"
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2024-07-08"
 author:

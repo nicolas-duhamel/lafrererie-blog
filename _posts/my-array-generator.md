@@ -1,6 +1,6 @@
 ---
 title: "My array generator"
-excerpt: "This is the challenge My array generator from downunder 2024"
+excerpt: "Crypto, downunder 2024"
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2024-07-08"
 author:

@@ -1,6 +1,6 @@
 ---
 title: "co2v2"
-excerpt: "This is the challenge co2v2 from downunder 2024"
+excerpt: "Web, downunder 2024"
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2024-07-08"
 author:
