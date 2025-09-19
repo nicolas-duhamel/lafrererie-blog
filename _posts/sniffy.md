@@ -1,13 +1,13 @@
 ---
 title: "Sniffy"
 excerpt: "Web, downunder 2024"
-coverImage: "/assets/blog/hello-world/cover.jpg"
+coverImage: "https://ctftime.org/media/cache/35/81/35817b4272fa1b66cf3617ab4d4ab0c0.png"
 date: "2024-07-08"
 author:
   name: dolipr4necrypt0
   picture: "/assets/blog/authors/dolipr4necrypt0.png"
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
+  url: "https://ctftime.org/media/cache/35/81/35817b4272fa1b66cf3617ab4d4ab0c0.png"
 ---
 
 [Source du challenge](https://github.com/DownUnderCTF/Challenges_2024_Public/tree/main/web/sniffy/src)
