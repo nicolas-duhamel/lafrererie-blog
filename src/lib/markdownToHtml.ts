@@ -7,7 +7,7 @@ import { createHighlighter } from "shiki";
 export default async function markdownToHtml(markdown: string) {
   const highlighter = await createHighlighter({
     themes: ["slack-dark"],
-    langs: ["javascript", "typescript", "python", "bash", "text"],
+    langs: ["javascript", "typescript", "python", "bash", "text", "c"],
   });
 
   const tree = remark()
