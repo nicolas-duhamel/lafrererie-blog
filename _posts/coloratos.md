@@ -662,7 +662,7 @@ Ensuite des définitions de classes pour regrouper les glyphes
     [... tous les autres suivent avec a= class1 b=class2 etc]
 ```
 Dans ce cas il n'y aura pas de "backtrack" dont on regardera pas le caractere avant. On sera bien sur "b" et le caractere suivant appartiendra à une classe commune (les "a" avec les "a", les "c" avec les ""c etc...).  
-``
+```
 <ChainSubClassRule index="0">
 <!-- BacktrackGlyphCount=0 -->
 <!-- InputGlyphCount=1 -->
