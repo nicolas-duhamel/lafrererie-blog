@@ -24,7 +24,7 @@ The application has 3 services that interact with the request. We will not inclu
 
 Varnish is used as a caching layer and can be configured to intercept and manipulate HTTP requests. Here's the relevant part of the Varnish configuration:
 
-```vcl
+```
 sub vcl_backend_fetch {
     if (bereq.http.host == "give_me_the_flag") {
         set bereq.backend = flag_backend;
@@ -51,7 +51,7 @@ We can see the redirection to the flag_backend for the host `give_me_the_flag`, 
 
 The `apache.conf` file configures an Apache server to forward requests to an Express application via a **ProxyPass**. The relevant part of the configuration looks like this:
 
-```apache
+```
 <VirtualHost *:8000>
     TraceEnable on
     ProxyPass / http://taskvault-app:3000/
@@ -113,7 +113,7 @@ Here’s what happens:
 
 And here is the response with the `X-Admin-Key` :
 
-```http
+```
 TRACE / HTTP/1.1
 host: taskvault.fcsc.fr
 user-agent: curl/8.11.1
