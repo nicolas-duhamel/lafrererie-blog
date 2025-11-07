@@ -2,7 +2,7 @@
 title: "Taskvault"
 excerpt: "Web, FCSC 2025"
 coverImage: "https://ctftime.org/media/cache/35/81/35817b4272fa1b66cf3617ab4d4ab0c0.png"
-date: "2024-04-23"
+date: "2025-04-23"
 author:
   name: dolipr4necrypt0
   picture: "/assets/blog/authors/dolipr4necrypt0.png"
